@@ -35,7 +35,13 @@ docker build -t text-extract .
 docker run --rm -v "$PWD:/app" text-extract
 ```
 
-- The `-v "$PWD:/app"` flag mounts your working directory, saving `output.txt` to your local folder after processing.
+Or
+
+```powershell
+docker run --rm -v "${PWD}:/app" text-extract
+```
+
+- The `-v "$PWD:/app"` and `${PWD}` are flags that mounts your working directory, saving `output.txt` to your local folder after processing.
 
 ### 4. Get your results
 
